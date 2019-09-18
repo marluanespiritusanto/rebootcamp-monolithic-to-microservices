@@ -12,7 +12,7 @@ apiRoute.use(cors());
 apiRoute.use("/", HomeRoutes);
 apiRoute.use("/product", ProductRoutes);
 
-router.use("/api", apiRoute);
+router.use("/api/v1", apiRoute);
 router.use(NotFoundMiddleware);
 router.use(ErrorHandlerMiddleware);
 

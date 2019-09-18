@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  users:
+    build: ./user-service
+
+  payments:
+    build: ./payment-service
+
+  products:
+    build: ./product-service
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - users
+      - payments
+      - products
