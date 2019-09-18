@@ -1,0 +1,24 @@
+<figure class="card__">
+    <div class="card__emoji">{{this.image}}{{this.image}}</div>
+    <div class="card__title-box">
+        <h2 class="card__title">{{this.productName}}</h2>
+    </div>
+
+    <div class="card__details">
+        <div class="card__detail-box {{this.organic}}">
+            <h6 class="card__detail card__detail--organic">Organic!</h6>
+        </div>
+
+        <div class="card__detail-box">
+            <h6 class="card__detail">{{this.quantity}} per 📦</h6>
+        </div>
+
+        <div class="card__detail-box">
+            <h6 class="card__detail card__detail--price">{{this.price}}€</h6>
+        </div>
+    </div>
+
+    <a class="card__link" href="/product?id={{this.id}}">
+        <span>Detail <i class="emoji-right">👉</i></span>
+    </a>
+</figure>

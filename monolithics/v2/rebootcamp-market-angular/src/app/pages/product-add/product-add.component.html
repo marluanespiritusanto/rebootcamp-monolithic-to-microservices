@@ -1,0 +1,73 @@
+<figure class="product">
+  <a [routerLink]="['/']" class="product__back">
+    <span class="emoji-left">👈</span>Back
+  </a>
+  <div class="product__hero">
+    <span class="product__emoji product__emoji--1">🥣</span>
+    <span class="product__emoji product__emoji--2">🥣</span>
+    <span class="product__emoji product__emoji--3">🥣</span>
+    <span class="product__emoji product__emoji--4">🥣</span>
+    <span class="product__emoji product__emoji--5">🥣</span>
+    <span class="product__emoji product__emoji--6">🥣</span>
+    <span class="product__emoji product__emoji--7">🥣</span>
+    <span class="product__emoji product__emoji--8">🥣</span>
+    <span class="product__emoji product__emoji--9">🥣</span>
+  </div>
+  <h2 class="product__name">Add new</h2>
+  <div class="product__details">
+    <form
+      #editForm="ngForm"
+      (ngSubmit)="createProduct()"
+      id="editForm"
+      class="product__details"
+    >
+      <input
+        type="text"
+        name="productName"
+        placeholder="Name"
+        [(ngModel)]="product.productName"
+      />
+      <input
+        type="text"
+        name="image"
+        placeholder="Image (emoji)"
+        [(ngModel)]="product.image"
+      />
+      <input
+        type="text"
+        name="from"
+        placeholder="From"
+        [(ngModel)]="product.from"
+      />
+      <input
+        type="text"
+        name="nutrients"
+        placeholder="Nutrients"
+        [(ngModel)]="product.nutrients"
+      />
+      <input
+        type="text"
+        name="quantity"
+        placeholder="Quantity"
+        [(ngModel)]="product.quantity"
+      />
+      <input
+        type="number"
+        name="price"
+        placeholder="Price"
+        [(ngModel)]="product.price"
+      />
+      <label style="font-size: 12px;"
+        ><input
+          type="checkbox"
+          name="organic"
+          [(ngModel)]="product.organic"
+        />Is organic?</label
+      >
+      <label style="font-size: 12px;"
+        >Description <textarea name="description" cols="30" rows="10"></textarea
+      ></label>
+      <input type="submit" value="Save" class="product__back" />
+    </form>
+  </div>
+</figure>

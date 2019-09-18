@@ -1,0 +1,32 @@
+<figure class="product">
+
+    <a href="/" class="product__back">
+        <span class="emoji-left">👈</span>Back
+    </a>
+    <div class="product__hero">
+        <span class="product__emoji product__emoji--1">🥣</span>
+        <span class="product__emoji product__emoji--2">🥣</span>
+        <span class="product__emoji product__emoji--3">🥣</span>
+        <span class="product__emoji product__emoji--4">🥣</span>
+        <span class="product__emoji product__emoji--5">🥣</span>
+        <span class="product__emoji product__emoji--6">🥣</span>
+        <span class="product__emoji product__emoji--7">🥣</span>
+        <span class="product__emoji product__emoji--8">🥣</span>
+        <span class="product__emoji product__emoji--9">🥣</span>
+    </div>
+    <h2 class="product__name">Add new</h2>
+    <div class="product__details">
+        <form action="product/add" method="POST" class="product__details">
+            <input type="text" name="productName" placeholder="Name">
+            <input type="text" name="image" placeholder="Image (emoji)">
+            <input type="text" name="from" placeholder="From">
+            <input type="text" name="nutrients" placeholder="Nutrients">
+            <input type="text" name="quantity" placeholder="Quantity">
+            <input type="number" name="price" placeholder="Price">
+            <label style="font-size: 12px;"><input type="checkbox" name="organic">Is organic?</label>
+            <label style="font-size: 12px;">Description <textarea name="description" cols="30"
+                    rows="10"></textarea></label>
+            <input type="submit" value="Save" class="product__back">
+        </form>
+    </div>
+</figure>
