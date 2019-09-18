@@ -10,7 +10,7 @@ import { Product } from "src/app/models/product.model";
 })
 export class ProductDetailComponent implements OnInit {
   product: Product = {
-    id: 0,
+    _id: "",
     productName: "",
     image: "",
     from: "",
