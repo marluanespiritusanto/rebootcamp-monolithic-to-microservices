@@ -3,19 +3,29 @@ version: "3"
 services:
   product:
     build: ./product-service
-    links:
-      - mongo
     depends_on:
       - mongo
 
-  webapp:
-    build: ./webapp-service
-    links:
-      - product
+  python:
+    build: ./product-save-service
     depends_on:
-      - product
+      - mongo
     ports:
-      - "4200:4200"
+      - "5000:5000"
+
+  listing:
+    build: ./listing-service
+    depends_on:
+      - mongo
+
+  # webapp:
+  #   build: ./webapp-service
+  #   links:
+  #     - product
+  #   depends_on:
+  #     - product
+  #   ports:
+  #     - "4200:4200"
 
   mongo:
     container_name: mongo
@@ -32,4 +42,6 @@ services:
     depends_on:
       - product
       - mongo
-      - webapp
+      - listing
+      - python
+      # - webapp
