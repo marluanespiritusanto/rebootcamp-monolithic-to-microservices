@@ -1,15 +1,21 @@
 version: "3"
 
 services:
-  product:
-    build: ./product-service
+  details:
+    build: ./details-service
     depends_on:
       - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/rebootcamp
+      - PORT=3000
+      - SERVICE_NAME='Detail service'
 
-  python:
-    build: ./product-save-service
+  creator:
+    build: ./creator-service
     depends_on:
       - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/rebootcamp
     ports:
       - "5000:5000"
 
@@ -17,21 +23,16 @@ services:
     build: ./listing-service
     depends_on:
       - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/rebootcamp
+      - COLLECTION_NAME=products
+      - DATABASE_NAME=rebootcamp
 
-  # webapp:
-  #   build: ./webapp-service
-  #   links:
-  #     - product
-  #   depends_on:
-  #     - product
-  #   ports:
-  #     - "4200:4200"
+  webapp:
+    build: ./webapp-service
 
   mongo:
-    container_name: mongo
     image: mongo
-    ports:
-      - "27017:27017"
 
   nginx:
     image: nginx:latest
@@ -40,8 +41,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - product
+      - details
       - mongo
       - listing
-      - python
-      # - webapp
+      - creator
