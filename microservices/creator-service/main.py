@@ -3,7 +3,7 @@ from flask import jsonify, request
 
 
 @app.route('/product/create', methods=['POST'])
-def add_user():
+def create_product():
     json = request.json
     _productName = json['productName']
     _image = json['image']
