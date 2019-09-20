@@ -53,27 +53,5 @@
     "price": "2.00",
     "organic": false,
     "description": "Also known as maize, corn is one of the most popular cereal grains in the world. Popcorn and sweet corn are commonly eaten varieties, but refined corn products are also widely consumed, frequently as ingredients in foods. These include tortillas, tortilla chips, polenta, cornmeal, corn flour, corn syrup, and corn oil. Whole-grain corn is as healthy as any cereal grain, rich in fiber and many vitamins, minerals, and antioxidants."
-  },
-  {
-    "id": 5,
-    "productName": "Mango",
-    "image": "🥭",
-    "from": "Dominican Republic",
-    "nutrients": "Vitamin C",
-    "quantity": "14",
-    "price": "12",
-    "organic": "on",
-    "description": "Mango is a very good fruit"
-  },
-  {
-    "productName": "Grape",
-    "image": "🍇",
-    "from": "Italy",
-    "nutrients": "Vitamin C",
-    "quantity": "55",
-    "price": "45",
-    "organic": "on",
-    "description": "sfdsfsdfdff",
-    "id": 6
   }
 ]
