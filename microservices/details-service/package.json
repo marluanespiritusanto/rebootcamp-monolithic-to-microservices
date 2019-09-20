@@ -1,12 +1,13 @@
 {
   "name": "product-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Details service",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Marluan Espiritusanto",
+  "repository": "https://github.com/MarluanEspiritusanto/rebootcamp-monolithic-to-microservices.git",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
