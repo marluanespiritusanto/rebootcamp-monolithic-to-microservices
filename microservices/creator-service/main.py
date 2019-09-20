@@ -2,11 +2,6 @@ from configuration import app, mongo
 from flask import jsonify, request
 
 
-@app.route('/', methods=['GET'])
-def get():
-    return 'Hello world!'
-
-
 @app.route('/product/create', methods=['POST'])
 def add_user():
     json = request.json
