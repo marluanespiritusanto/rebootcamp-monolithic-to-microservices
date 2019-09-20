@@ -9,7 +9,7 @@ namespace listing_service.Models
         string Nutrients { get; set; }
         string Quantity { get; set; }
         double Price { get; set; }
-        string Organic { get; set; }
+        bool Organic { get; set; }
         string Description { get; set; }
     }
 }

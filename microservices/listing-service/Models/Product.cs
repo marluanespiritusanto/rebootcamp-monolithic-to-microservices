@@ -21,7 +21,7 @@ namespace listing_service.Models
         [BsonElement("price")]
         public double Price { get; set; }
         [BsonElement("organic")]
-        public string Organic { get; set; }
+        public bool Organic { get; set; }
         [BsonElement("description")]
         public string Description { get; set; }
     }
