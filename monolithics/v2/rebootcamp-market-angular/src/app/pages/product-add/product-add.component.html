@@ -65,7 +65,13 @@
         />Is organic?</label
       >
       <label style="font-size: 12px;"
-        >Description <textarea name="description" cols="30" rows="10"></textarea
+        >Description
+        <textarea
+          name="description"
+          cols="30"
+          rows="10"
+          [(ngModel)]="product.description"
+        ></textarea
       ></label>
       <input type="submit" value="Save" class="product__back" />
     </form>
