@@ -13,17 +13,17 @@ export class HttpService {
   constructor(private _http: HttpClient) {}
 
   public getProducts(): Observable<Product[]> {
-    return this._http.get<Product[]>(this.baseUrl + "/product");
+    return this._http.get<Product[]>(this.baseUrl + "/listing");
   }
 
   public getProduct(id: string): Observable<Product> {
-    return this._http.get<Product>(this.baseUrl + "/product/" + id);
+    return this._http.get<Product>(this.baseUrl + "/details/" + id);
   }
 
   public createProduct(product: Product) {
-    delete product._id;
+    delete product.id;
     return this._http
-      .post(this.baseUrl + "/product", product)
+      .post(this.baseUrl + "/create", product)
       .subscribe(result => {});
   }
 }

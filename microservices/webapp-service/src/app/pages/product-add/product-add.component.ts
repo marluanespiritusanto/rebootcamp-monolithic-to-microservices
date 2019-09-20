@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 })
 export class ProductAddComponent implements OnInit {
   product: Product = {
-    _id: "",
+    id: "",
     productName: "",
     image: "",
     from: "",
